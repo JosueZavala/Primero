@@ -5,19 +5,19 @@
  */
 package Salas;
 
-import javax.swing.*;
-
 /**
  *
  * @author josue
  */
-public class Sala extends JFrame{
+public class Area_Quirofano extends Area{
     
-    public Sala(String nom_Area){
-        setSize(400,450);
-        setTitle(nom_Area);
-        setLocationRelativeTo(null);
-        setVisible(true);
+
+    
+    
+    public Area_Quirofano(String nom_Area) {
+        super(nom_Area);
+        
     }
+    
     
 }

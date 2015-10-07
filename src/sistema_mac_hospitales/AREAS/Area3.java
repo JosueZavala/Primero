@@ -5,7 +5,7 @@
  */
 package sistema_mac_hospitales.AREAS;
 
-import Salas.Sala;
+import Salas.Area;
 
 /**
  *
@@ -247,7 +247,7 @@ public class Area3 extends javax.swing.JFrame {
     }//GEN-LAST:event_area9ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        Sala area=new Sala("Encamados");
+        Area area=new Area("Encamados");
         this.setVisible(false);
     }//GEN-LAST:event_b1ActionPerformed
 
