@@ -106,7 +106,7 @@ public class Area extends JFrame{
 //        
 //        contenedor.add(sala1);
 //        contenedor.add(sala2);
-//        contenedor.add(home);
+       contenedor.add(home);
     }
     
     
