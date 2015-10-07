@@ -11,13 +11,13 @@ import java.util.GregorianCalendar;
  *
  * @author josue
  */
-public class Electrocauterio extends Equipo{
+public class Elect extends Equipo{
 
-    public Electrocauterio(String name, String marca, String modelo, String serie, GregorianCalendar primerMto, GregorianCalendar segundoMto) {
+    public Elect(String name, String marca, String modelo, String serie, GregorianCalendar primerMto, GregorianCalendar segundoMto) {
         super(name, marca, modelo, serie, primerMto, segundoMto);
     }
     
-    public Electrocauterio(){
+    public Elect(){
         super();
     }
     

@@ -5,7 +5,7 @@
  */
 package Salas;
 
-import Equipos.Electrocauterio;
+
 import Equipos.Lamapara_Cirugia;
 import Equipos.Maquina_Anestesia;
 import Equipos.Mesa_Cirugia;
@@ -20,7 +20,7 @@ public class Sala_Quirofano extends Sala{
     private Monitor monitor1;
     private Mesa_Cirugia mesa_C;
     private Maquina_Anestesia maq_Anes;
-    private Electrocauterio electro;
+    
     private Lamapara_Cirugia lamp;
     private Lamapara_Cirugia lamp2;
     
