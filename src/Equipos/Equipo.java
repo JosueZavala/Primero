@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Equipos;
 
 import java.util.GregorianCalendar;
@@ -15,33 +10,35 @@ import java.util.GregorianCalendar;
 //CLASE QUE NOS SERVIRA PARA CREAR TODOS LOS EQUIPOS MEDICOS (CLASE PADRE)
 
 public class Equipo {
-    private String name;
-    private String marca;
-    private String modelo;
-    private String serie;
-    private GregorianCalendar primerMto;
-    private GregorianCalendar segundoMto;
+//    private String name, marca, modelo, serie;
+//    private GregorianCalendar primerMto;
+//    private GregorianCalendar segundoMto;
+    public String[] datosGrales = {"","","","S/N"}; //Nombre, marca, modelo, serie.
+    public GregorianCalendar[] mantenimiento = new GregorianCalendar[2];
 
     public Equipo() {
-        name="";
+        /*name="";
         marca="";
         modelo="";
         serie="S/N";
         primerMto=new GregorianCalendar(2015, 01, 06);
-        segundoMto=new GregorianCalendar(2015, 07, 07);
+        segundoMto=new GregorianCalendar(2015, 07, 07);*/
     }
- 
     
-    public Equipo(String name, String marca, String modelo, String serie, GregorianCalendar primerMto, GregorianCalendar segundoMto) {
+    public Equipo(Object... n){
+    /*public Equipo(String name, String marca, String modelo, String serie, GregorianCalendar primerMto, GregorianCalendar segundoMto) {
         this.name = name;
         this.marca = marca;
         this.modelo = modelo;
         this.serie = serie;
         this.primerMto = primerMto;
-        this.segundoMto = segundoMto;
+        this.segundoMto = segundoMto;*/
+        for (int i = 0; i < 4; i++)
+            datosGrales[i] = (String) n[i];
+        mantenimiento[0] = (GregorianCalendar) n[4];
+        mantenimiento[1] = (GregorianCalendar) n[5];
     }
-    
-
+    /*
     public GregorianCalendar getSegundoMto() {
         return segundoMto;
     }
@@ -50,7 +47,6 @@ public class Equipo {
         this.segundoMto = segundoMto;
     }
      
-
     public GregorianCalendar getPrimerMto() {
         return primerMto;
     }
@@ -59,7 +55,6 @@ public class Equipo {
         this.primerMto = primerMto;
     }
 
-    
     public String getName() {
         return name;
     }
@@ -91,7 +86,5 @@ public class Equipo {
     public void setSerie(String serie) {
         this.serie = serie;
     }
-    
-    
-    
+    */
 }
