@@ -10,37 +10,40 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SpringLayout;
 
 /**
  *
  * @author josue
  */
-
-//Clase que servira como generica para desplegar las salas
-public class Area extends JFrame{
-   
+public class Sala extends JFrame{
+    
+    
     private final int POS_X_INICIAL=20;
     private final int POS_Y_INICIAL=20;
     private final int ESP_BTN_VERT=10;
     private final int ESP_BTN_HOR=95;
     
     
-    LinkedList<JButton>Lista_Salas;
+    LinkedList<JButton>Lista_Equipos;
     
     //private final JButton homeButton=new JButton("Volver");
     private final ImageButton home;
     private final ImageButton volver;
-    JButton salan_n=new JButton();      //Inicializador de botones que entraran en la linked list.
+    JButton equipo_n=new JButton();      //Inicializador de botones que entraran en la linked list.
     
-    JFrame menuAuxiliar;
-    JFrame localAuxiliar;
+    JFrame menuAuxiliar;                 //Contiene el frame auxiliar que simulara el retorno al menu
+    JFrame ant_Auxiliar;                 //Contiene el frame auxiliar que simulara el retorno a la pagina anterior
     
     //Para generar la sala el constructor recibira como parametro el nombre de la sala
     //Y el numero de salas que tendra
-    public Area(String name, int n_Salas, JFrame menu){
+    public Sala(String name, int n_Salas, JFrame menu, JFrame anterior){
         //Titulo tamaño y orientacion del Frame
-        Lista_Salas=new LinkedList<JButton>();
+        Lista_Equipos=new LinkedList<JButton>();
         setTitle(name);          
         setSize(new Dimension(500, 280));
         setLocationRelativeTo(null);
@@ -48,7 +51,7 @@ public class Area extends JFrame{
         
         JPanel panel=new JPanel();
         menuAuxiliar=menu;
-        localAuxiliar=this;
+        ant_Auxiliar=anterior;
         
         //Objeto para definir el tamaño de los botones
         Dimension dim=new Dimension(85,45);
@@ -58,25 +61,25 @@ public class Area extends JFrame{
         //For para llenar la lista con el numero de salas que contiene el area.
         for (int i = 0; i < n_Salas; i++) {
             int c=1+i;
-            salan_n=new JButton("Sala "+c);
+            equipo_n=new JButton("Equipo "+c);
             //Declaracion de tamaño de botones
-            salan_n.setPreferredSize(dim);
-            Lista_Salas.push(salan_n);
-            System.out.println("Sala "+c+" Agregada");
+            equipo_n.setPreferredSize(dim);
+            Lista_Equipos.push(equipo_n);
+            System.out.println("Equipo "+c+" Agregada");
         }
         
         //Declaracion del Springlayout para controlar la posicion de los elementos por coordenadas.
-                Container contenedor=getContentPane(); 
+        Container contenedor=getContentPane(); 
         SpringLayout layout=new SpringLayout();
         contenedor.setLayout(layout);
         
         int ix=POS_X_INICIAL;
         int iy=POS_Y_INICIAL;
         
-        while (!Lista_Salas.isEmpty()) {                        
+        while (!Lista_Equipos.isEmpty()) {                        
             
-            layout.putConstraint(SpringLayout.WEST, Lista_Salas.getLast(), (ix), SpringLayout.WEST, contenedor);  //Eje en x
-            layout.putConstraint(SpringLayout.NORTH, Lista_Salas.getLast(), iy, SpringLayout.NORTH, contenedor);  //Eje en y            
+            layout.putConstraint(SpringLayout.WEST, Lista_Equipos.getLast(), (ix), SpringLayout.WEST, contenedor);  //Eje en x
+            layout.putConstraint(SpringLayout.NORTH, Lista_Equipos.getLast(), iy, SpringLayout.NORTH, contenedor);  //Eje en y            
             
             ix+=ESP_BTN_HOR;
             
@@ -87,19 +90,15 @@ public class Area extends JFrame{
                 iy+=dim.height+ESP_BTN_VERT;
             }
             
-            String t_Para_Sala=Lista_Salas.getLast().getText();
-            
-            Lista_Salas.getLast().addActionListener(new ActionListener() {
+            Lista_Equipos.getLast().addActionListener(new ActionListener() {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    Sala n=new Sala(t_Para_Sala, 4, menuAuxiliar, localAuxiliar);
-                    n.setVisible(true);
-                    setVisible(false);
+                    
                 }
             });
             
-            contenedor.add(Lista_Salas.removeLast());
+            contenedor.add(Lista_Equipos.removeLast());
         }
         
         System.out.println("ya salio");
@@ -137,7 +136,7 @@ public class Area extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                menu.setVisible(true);
+                anterior.setVisible(true);
                 setVisible(false);
             }
         });
@@ -145,7 +144,6 @@ public class Area extends JFrame{
        contenedor.add(home);
        contenedor.add(volver);
     }
-    
     
     
     
