@@ -182,7 +182,7 @@ public class Menu extends javax.swing.JFrame {
         //Area1 a1 = new Area1();
         //a1.setLocationRelativeTo(null);
         //a1.setVisible(true);
-        Area quimioterapia=new Area("Quimioterapia",8,this);
+        Area quimioterapia=new Area("Tococirugia",17,this);
         quimioterapia.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_quimioterapiaBActionPerformed
