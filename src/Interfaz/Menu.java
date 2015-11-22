@@ -1,5 +1,6 @@
 package Interfaz;
 
+import javax.swing.JButton;
 import sistema_mac_hospitales.AREAS.*;
 
 public class Menu extends javax.swing.JFrame {
@@ -13,16 +14,17 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu3 = new javax.swing.JMenu();
-        quimioterapiaB = new javax.swing.JButton();
-        tococirugiaB = new javax.swing.JButton();
-        quirofanoB = new javax.swing.JButton();
-        b5 = new javax.swing.JButton();
-        b4 = new javax.swing.JButton();
-        b6 = new javax.swing.JButton();
-        b7 = new javax.swing.JButton();
-        b8 = new javax.swing.JButton();
-        b9 = new javax.swing.JButton();
+        quirofano_B = new javax.swing.JButton();
+        recuperacion_B = new javax.swing.JButton();
+        ceye_B = new javax.swing.JButton();
+        uci_B = new javax.swing.JButton();
+        tococirugia_B = new javax.swing.JButton();
+        ucin_B = new javax.swing.JButton();
+        terapiaI_B = new javax.swing.JButton();
+        urgencias_B = new javax.swing.JButton();
+        hospitalizacion_B = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        guardaEq_B = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         salir = new javax.swing.JMenuItem();
@@ -36,71 +38,78 @@ public class Menu extends javax.swing.JFrame {
         setTitle("SISTEMA DE MANTENIMIENTO DE EQUIPOS");
         setResizable(false);
 
-        quimioterapiaB.setText("QUIMIOTERAPIA");
-        quimioterapiaB.addActionListener(new java.awt.event.ActionListener() {
+        quirofano_B.setText("QUIROFANO");
+        quirofano_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quimioterapiaBActionPerformed(evt);
+                quirofano_BActionPerformed(evt);
             }
         });
 
-        tococirugiaB.setText("TOCOCIRUGÍA");
-        tococirugiaB.addActionListener(new java.awt.event.ActionListener() {
+        recuperacion_B.setText("RECUPERACION");
+        recuperacion_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tococirugiaBActionPerformed(evt);
+                recuperacion_BActionPerformed(evt);
             }
         });
 
-        quirofanoB.setText("QUIRÓFANO");
-        quirofanoB.addActionListener(new java.awt.event.ActionListener() {
+        ceye_B.setText("CEYE");
+        ceye_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quirofanoBActionPerformed(evt);
+                ceye_BActionPerformed(evt);
             }
         });
 
-        b5.setText("AREA 5");
-        b5.addActionListener(new java.awt.event.ActionListener() {
+        uci_B.setText("UCI");
+        uci_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b5ActionPerformed(evt);
+                uci_BActionPerformed(evt);
             }
         });
 
-        b4.setText("AREA 4");
-        b4.addActionListener(new java.awt.event.ActionListener() {
+        tococirugia_B.setText("TOCOCIRUGIA");
+        tococirugia_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b4ActionPerformed(evt);
+                tococirugia_BActionPerformed(evt);
             }
         });
 
-        b6.setText("AREA 6");
-        b6.addActionListener(new java.awt.event.ActionListener() {
+        ucin_B.setText("UCIN");
+        ucin_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b6ActionPerformed(evt);
+                ucin_BActionPerformed(evt);
             }
         });
 
-        b7.setText("AREA 7");
-        b7.addActionListener(new java.awt.event.ActionListener() {
+        terapiaI_B.setText("TERAPIA INTERMEDIA");
+        terapiaI_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b7ActionPerformed(evt);
+                terapiaI_BActionPerformed(evt);
             }
         });
 
-        b8.setText("AREA 8");
-        b8.addActionListener(new java.awt.event.ActionListener() {
+        urgencias_B.setText("URGENCIAS");
+        urgencias_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b8ActionPerformed(evt);
+                urgencias_BActionPerformed(evt);
             }
         });
 
-        b9.setText("AREA 9");
-        b9.addActionListener(new java.awt.event.ActionListener() {
+        hospitalizacion_B.setText("HOSPITALIZACION");
+        hospitalizacion_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b9ActionPerformed(evt);
+                hospitalizacion_BActionPerformed(evt);
             }
         });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/mac_ags1.jpg"))); // NOI18N
+
+        guardaEq_B.setText("GUARDA EQUIPO");
+        guardaEq_B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardaEq_BActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Menú");
 
@@ -132,23 +141,25 @@ public class Menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(quimioterapiaB, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(quirofano_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(tococirugiaB, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(recuperacion_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(quirofanoB, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ceye_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tococirugia_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(uci_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ucin_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(terapiaI_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(urgencias_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardaEq_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(hospitalizacion_B, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,19 +167,22 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(quimioterapiaB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tococirugiaB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quirofanoB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(quirofano_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(recuperacion_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ceye_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tococirugia_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uci_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ucin_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(terapiaI_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(urgencias_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hospitalizacion_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(guardaEq_B, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -178,88 +192,87 @@ public class Menu extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
-    private void quimioterapiaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quimioterapiaBActionPerformed
-        //Area1 a1 = new Area1();
-        //a1.setLocationRelativeTo(null);
-        //a1.setVisible(true);
-        Area quimioterapia=new Area("Tococirugia",17,this);
+    private void quirofano_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quirofano_BActionPerformed
+        doArea(quirofano_B);
+        
+        //Dejo esto comentado porque es el codigo sirvio antes de hacer la modificacion con la funcion 
+        //Como un backup en caso de que haya algun problema con la funcion doArea
+        /*Area quimioterapia=new Area("Tococirugia",17,this);
         quimioterapia.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_quimioterapiaBActionPerformed
+        this.setVisible(false);*/
+    }//GEN-LAST:event_quirofano_BActionPerformed
 
-    private void tococirugiaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tococirugiaBActionPerformed
-        Area2 a2 = new Area2();
-        a2.setLocationRelativeTo(null);
-        a2.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_tococirugiaBActionPerformed
+    private void recuperacion_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperacion_BActionPerformed
+        doArea(recuperacion_B);
+    }//GEN-LAST:event_recuperacion_BActionPerformed
 
-    private void quirofanoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quirofanoBActionPerformed
-        Area3 a3 = new Area3();
-        a3.setLocationRelativeTo(null);
-        a3.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_quirofanoBActionPerformed
+    private void ceye_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceye_BActionPerformed
+       doArea(ceye_B);
+    }//GEN-LAST:event_ceye_BActionPerformed
 
-    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        Area4 a4 = new Area4();
-        a4.setLocationRelativeTo(null);
-        a4.setVisible(true);
-    }//GEN-LAST:event_b4ActionPerformed
+    private void tococirugia_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tococirugia_BActionPerformed
+        doArea(tococirugia_B);
+    }//GEN-LAST:event_tococirugia_BActionPerformed
 
-    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        Area5 a5= new Area5();
-        a5.setLocationRelativeTo(null);
-        a5.setVisible(true);
-    }//GEN-LAST:event_b5ActionPerformed
+    private void uci_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uci_BActionPerformed
+        doArea(uci_B);
+    }//GEN-LAST:event_uci_BActionPerformed
 
-    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        Area6 a6 = new Area6();
-        a6.setLocationRelativeTo(null);
-        a6.setVisible(true);
-    }//GEN-LAST:event_b6ActionPerformed
+    private void ucin_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucin_BActionPerformed
+        doArea(ucin_B);
+    }//GEN-LAST:event_ucin_BActionPerformed
 
-    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        Area7 a7 = new Area7();
-        a7.setLocationRelativeTo(null);
-        a7.setVisible(true);
-    }//GEN-LAST:event_b7ActionPerformed
+    private void terapiaI_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terapiaI_BActionPerformed
+        doArea(terapiaI_B);
+    }//GEN-LAST:event_terapiaI_BActionPerformed
 
-    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        Area8 a8 = new Area8();
-        a8.setLocationRelativeTo(null);
-        a8.setVisible(true);
-    }//GEN-LAST:event_b8ActionPerformed
+    private void urgencias_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_urgencias_BActionPerformed
+        doArea(urgencias_B);
+    }//GEN-LAST:event_urgencias_BActionPerformed
 
-    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        Area9 a9 = new Area9();
-        a9.setLocationRelativeTo(null);
-        a9.setVisible(true);
-    }//GEN-LAST:event_b9ActionPerformed
+    private void hospitalizacion_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalizacion_BActionPerformed
+        doArea(hospitalizacion_B);
+    }//GEN-LAST:event_hospitalizacion_BActionPerformed
+
+    private void guardaEq_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardaEq_BActionPerformed
+        doArea(guardaEq_B);
+    }//GEN-LAST:event_guardaEq_BActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
             new Menu().setVisible(true);
         });
     }
+    
+    public void doArea(JButton botonArea){
+        String name=botonArea.getText();
+        Area area = new Area(name,8,this);
+        area.setVisible(true);
+        this.setVisible(false);
+        /*
+            Esta funcion lo que hace es declarar el area con el nombre del boton que la mando llamar y el numero
+            de salas que le corresponden, (Este numero se sacara de la base de datos).
+        */
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton b4;
-    private javax.swing.JButton b5;
-    private javax.swing.JButton b6;
-    private javax.swing.JButton b7;
-    private javax.swing.JButton b8;
-    private javax.swing.JButton b9;
+    private javax.swing.JButton ceye_B;
+    private javax.swing.JButton guardaEq_B;
     private javax.swing.JMenuItem horarios;
+    private javax.swing.JButton hospitalizacion_B;
     private javax.swing.JMenuItem inventario;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JButton quimioterapiaB;
-    private javax.swing.JButton quirofanoB;
+    private javax.swing.JButton quirofano_B;
+    private javax.swing.JButton recuperacion_B;
     private javax.swing.JMenuItem salir;
-    private javax.swing.JButton tococirugiaB;
+    private javax.swing.JButton terapiaI_B;
+    private javax.swing.JButton tococirugia_B;
+    private javax.swing.JButton uci_B;
+    private javax.swing.JButton ucin_B;
+    private javax.swing.JButton urgencias_B;
     // End of variables declaration//GEN-END:variables
 }

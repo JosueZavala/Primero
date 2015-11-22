@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/home/josue/GitHub/Primero/src/Interfaz/ImageButton.java</file>
-            <file>file:/home/josue/GitHub/Primero/src/Interfaz/Area.java</file>
-            <file>file:/home/josue/GitHub/Primero/src/Interfaz/Sala.java</file>
-            <file>file:/home/josue/GitHub/Primero/src/Interfaz/Images/volver.png</file>
-            <file>file:/home/josue/GitHub/Primero/src/Interfaz/Menu.java</file>
-=======
-            <file>file:/home/quinto/Documentos/GITHUB/Primero/src/Interfaz/Menu.java</file>
-            <file>file:/home/quinto/Documentos/GITHUB/Primero/src/Interfaz/Area.java</file>
-            <file>file:/home/quinto/Documentos/GITHUB/Primero/src/Interfaz/Tabla.java</file>
-            <file>file:/home/quinto/Documentos/GITHUB/Primero/src/Interfaz/Sala.java</file>
-            <file>file:/home/quinto/Documentos/GITHUB/Primero/src/Equipos/Equipo.java</file>
->>>>>>> 5606551c735e9eeb296e1b01716692a0d86996bf
-        </group>
+        <group/>
     </open-files>
 </project-private>

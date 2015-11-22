@@ -75,25 +75,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="quimioterapiaB" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="quirofano_B" min="-2" pref="163" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="tococirugiaB" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="recuperacion_B" min="-2" pref="163" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="quirofanoB" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="ceye_B" min="-2" pref="163" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="b4" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="tococirugia_B" min="-2" pref="163" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="b5" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="uci_B" min="-2" pref="163" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="b6" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="ucin_B" min="-2" pref="163" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="b7" min="-2" pref="163" max="-2" attributes="0"/>
+              <Component id="terapiaI_B" min="-2" pref="163" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="b8" min="-2" pref="163" max="-2" attributes="0"/>
-              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="b9" min="-2" pref="163" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="urgencias_B" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
+                  <Component id="guardaEq_B" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="hospitalizacion_B" min="-2" pref="163" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,97 +106,100 @@
               <Component id="jLabel2" min="-2" pref="140" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="quimioterapiaB" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="tococirugiaB" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="quirofanoB" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="quirofano_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="recuperacion_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="ceye_B" min="-2" pref="48" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="b4" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="b5" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="b6" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="tococirugia_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="uci_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="ucin_B" min="-2" pref="48" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="b7" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="b8" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="b9" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="terapiaI_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="urgencias_B" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="hospitalizacion_B" min="-2" pref="48" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="guardaEq_B" min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="quimioterapiaB">
+    <Component class="javax.swing.JButton" name="quirofano_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="QUIMIOTERAPIA"/>
+        <Property name="text" type="java.lang.String" value="QUIROFANO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quimioterapiaBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quirofano_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="tococirugiaB">
+    <Component class="javax.swing.JButton" name="recuperacion_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="TOCOCIRUG&#xcd;A"/>
+        <Property name="text" type="java.lang.String" value="RECUPERACION"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tococirugiaBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="recuperacion_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="quirofanoB">
+    <Component class="javax.swing.JButton" name="ceye_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="QUIR&#xd3;FANO"/>
+        <Property name="text" type="java.lang.String" value="CEYE"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quirofanoBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ceye_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b5">
+    <Component class="javax.swing.JButton" name="uci_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 5"/>
+        <Property name="text" type="java.lang.String" value="UCI"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uci_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b4">
+    <Component class="javax.swing.JButton" name="tococirugia_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 4"/>
+        <Property name="text" type="java.lang.String" value="TOCOCIRUGIA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tococirugia_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b6">
+    <Component class="javax.swing.JButton" name="ucin_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 6"/>
+        <Property name="text" type="java.lang.String" value="UCIN"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b6ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ucin_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b7">
+    <Component class="javax.swing.JButton" name="terapiaI_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 7"/>
+        <Property name="text" type="java.lang.String" value="TERAPIA INTERMEDIA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b7ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terapiaI_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b8">
+    <Component class="javax.swing.JButton" name="urgencias_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 8"/>
+        <Property name="text" type="java.lang.String" value="URGENCIAS"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b8ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="urgencias_BActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="b9">
+    <Component class="javax.swing.JButton" name="hospitalizacion_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AREA 9"/>
+        <Property name="text" type="java.lang.String" value="HOSPITALIZACION"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b9ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hospitalizacion_BActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -203,6 +209,14 @@
           <Image iconType="3" name="/Interfaz/mac_ags1.jpg"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="guardaEq_B">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="GUARDA EQUIPO"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="guardaEq_BActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
