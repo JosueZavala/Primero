@@ -5,11 +5,17 @@
  */
 package Interfaz;
 
+import Conexion.Funciones;
+import Equipos.Equipo;
+import Conexion.Tabla;
+
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.util.LinkedList;
+import javax.swing.DefaultSingleSelectionModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -94,6 +100,36 @@ public class Sala extends JFrame{
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    setVisible(false);
+                    
+                    Connection miConexion;
+                    Funciones function=new Funciones();
+                    function.mostrar();
+                    
+                    
+                     Equipo equipAux;
+        
+                        //Tabla
+                        Object [][] a={};
+                        Tabla frame = new Tabla(a);
+
+                        while (!function.equipos.isEmpty()) {            
+                            // Agregar nueva fila
+                            //equipAux=f.equipos.pop();
+                            equipAux=function.equipos.pollLast();
+
+                            System.out.println(equipAux.getName()+" "+equipAux.getMarca());
+                            Object[] newRow={equipAux.getName(),equipAux.getSerie(),equipAux.getMarca(),equipAux.getModelo(),equipAux.getSala()};
+                            frame.dtm.addRow(newRow);    
+                        }
+
+
+
+                        frame.pack();
+                frame.setVisible(true);
+                    
+                    
+                    
                     
                 }
             });
