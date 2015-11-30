@@ -27,6 +27,7 @@ public class Area extends JFrame{
     
     
     LinkedList<JButton>Lista_Salas;
+    LinkedList<String>Name_Salas;
     
     //private final JButton homeButton=new JButton("Volver");
     private final ImageButton home;
@@ -38,9 +39,12 @@ public class Area extends JFrame{
     
     //Para generar la sala el constructor recibira como parametro el nombre de la sala
     //Y el numero de salas que tendra
-    public Area(String name, int n_Salas, JFrame menu){
+    public Area(String name, int n_Salas,LinkedList<String>N_salas,JFrame menu){
         //Titulo tamaño y orientacion del Frame
         Lista_Salas=new LinkedList<JButton>();
+        Name_Salas=N_salas;
+        
+        
         setTitle(name);          
         setSize(new Dimension(500, 280));
         setLocationRelativeTo(null);
@@ -58,15 +62,16 @@ public class Area extends JFrame{
         //For para llenar la lista con el numero de salas que contiene el area.
         for (int i = 0; i < n_Salas; i++) {
             int c=1+i;
-            salan_n=new JButton("Sala "+c);
+            //salan_n=new JButton("Sala "+c);
+            salan_n=new JButton(Name_Salas.pollFirst());
             //Declaracion de tamaño de botones
             salan_n.setPreferredSize(dim);
             Lista_Salas.push(salan_n);
-            System.out.println("Sala "+c+" Agregada");
+            //System.out.println("Sala "+c+" Agregada");
         }
         
         //Declaracion del Springlayout para controlar la posicion de los elementos por coordenadas.
-                Container contenedor=getContentPane(); 
+        Container contenedor=getContentPane(); 
         SpringLayout layout=new SpringLayout();
         contenedor.setLayout(layout);
         
@@ -83,7 +88,7 @@ public class Area extends JFrame{
             if(ix>=(ESP_BTN_HOR+395)){  //Valor que toma cuando acomoda el quinto elemento de tipo sala
                                         //if utilizado para saltar de renglon.
                 ix=POS_X_INICIAL;
-                System.out.println(dim.height);        //Objeto tipo Dimension, declarado anteriormente para instanciar el tamaño de los botones
+                //System.out.println(dim.height);        //Objeto tipo Dimension, declarado anteriormente para instanciar el tamaño de los botones
                 iy+=dim.height+ESP_BTN_VERT;
             }
             
@@ -102,7 +107,7 @@ public class Area extends JFrame{
             contenedor.add(Lista_Salas.removeLast());
         }
         
-        System.out.println("ya salio");
+        //System.out.println("ya salio");
         
         
         //CASOS ESPECIALES

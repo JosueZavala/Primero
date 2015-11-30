@@ -71,7 +71,7 @@ public class Sala extends JFrame{
             //Declaracion de tamaño de botones
             equipo_n.setPreferredSize(dim);
             Lista_Equipos.push(equipo_n);
-            System.out.println("Equipo "+c+" Agregada");
+            //System.out.println("Equipo "+c+" Agregada");
         }
         
         //Declaracion del Springlayout para controlar la posicion de los elementos por coordenadas.
@@ -104,7 +104,7 @@ public class Sala extends JFrame{
                     
                     Connection miConexion;
                     Funciones function=new Funciones();
-                    function.mostrar();
+                    function.obtainList();
                     
                     
                      Equipo equipAux;
@@ -123,21 +123,15 @@ public class Sala extends JFrame{
                             frame.dtm.addRow(newRow);    
                         }
 
-
-
                         frame.pack();
-                frame.setVisible(true);
-                    
-                    
-                    
-                    
+                        frame.setVisible(true);            
                 }
             });
             
             contenedor.add(Lista_Equipos.removeLast());
         }
         
-        System.out.println("ya salio");
+        //System.out.println("ya salio");
         
         
         //CASOS ESPECIALES

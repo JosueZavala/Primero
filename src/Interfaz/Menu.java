@@ -1,7 +1,9 @@
 package Interfaz;
 
 import javax.swing.JButton;
-import sistema_mac_hospitales.AREAS.*;
+import Conexion.*;
+import java.util.LinkedList;
+
 
 public class Menu extends javax.swing.JFrame {
     
@@ -104,7 +106,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/mac_ags1.jpg"))); // NOI18N
 
-        guardaEq_B.setText("GUARDA EQUIPO");
+        guardaEq_B.setText("GUARDAEQUIPO");
         guardaEq_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardaEq_BActionPerformed(evt);
@@ -200,6 +202,8 @@ public class Menu extends javax.swing.JFrame {
         /*Area quimioterapia=new Area("Tococirugia",17,this);
         quimioterapia.setVisible(true);
         this.setVisible(false);*/
+        
+        
     }//GEN-LAST:event_quirofano_BActionPerformed
 
     private void recuperacion_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperacion_BActionPerformed
@@ -245,8 +249,23 @@ public class Menu extends javax.swing.JFrame {
     }
     
     public void doArea(JButton botonArea){
+        int num_of_Salas=0;
         String name=botonArea.getText();
-        Area area = new Area(name,8,this);
+        Funciones f=new Funciones();
+        LinkedList<String>Nam_Sal;
+        
+        num_of_Salas=f.obtainDataOfSalas(name);
+        Nam_Sal=f.getNames_salas();
+        
+        System.out.println(Nam_Sal.size());
+        
+        /*while (!Nam_Sal.isEmpty()) {            
+            System.out.println("Nombre de sala: "+Nam_Sal.pollFirst());
+        }*/
+        
+        //System.out.println("Numero de Pseoudosalas: "+num_of_Salas);
+        
+        Area area = new Area(name,num_of_Salas,Nam_Sal,this);
         area.setVisible(true);
         this.setVisible(false);
         /*
